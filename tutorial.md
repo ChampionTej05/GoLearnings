@@ -30,7 +30,7 @@ This initializes the go.mod file with the import and version
 
 ### Primitive datatypes
 Different ways of declaring vars in golang 
-```
+```go
   var i int
   i = 42
   fmt.Println(" i number :", i)
@@ -57,13 +57,13 @@ Different ways of declaring vars in golang
  (*) - Dereference opertor in golang (Assign/get value)
  (&) - addressOf operator in golang (get the memory address)
  **Go doesn't support pointer arithmetic** 
-```
+```go
   var firstName *string                    // pointer to the string value
   fmt.Println(" first name : ", firstName) // Nil
   //firstName = "Rakshit" // error : can't assign string to pointer
 
   //  (*) derefrences the pointer to store the data
-  /* *firstName = "Rakshit" // runtime error: invalid memory address or nil pointer dereference */
+  *firstName = "Rakshit" // runtime error: invalid memory address or nil pointer dereference 
   // We have NIL value for firstName pointer so can't assign to NIL Pointer
 
   var lastName *string = new(string)
@@ -88,7 +88,7 @@ Different ways of declaring vars in golang
  Assign value during declaration only 
  Can't assign value returned from function since it is runtime 
 
- ```
+ ```go
   const pi = 3 // needs to be available at compile time
   // so const can't be assigned value from functions
   fmt.Println(pi)
