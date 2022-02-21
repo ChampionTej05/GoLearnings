@@ -13,5 +13,4 @@ func main() {
 		LastName:  "Kathawate",
 	}
 	fmt.Println(user)
-	models.User{}
 }
