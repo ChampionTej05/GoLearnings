@@ -230,6 +230,44 @@ Different ways of declaring vars in golang
     fmt.Println(u1) // {FirstName 1 lastName}
   ```
     
+### Functions 
+```go
+    // func with params of different data types
+    func sampleFunc(arg1 string, arg2 int) {
+      fmt.Println(arg1, arg2)
+    }
 
+    // func with params of same data type
+    func sampleSameData(arg1, arg2 string) {
+      fmt.Println(arg1, arg2)
+    }
+
+    func errorFunc(arg1 string) error {
+      fmt.Println(arg1)
+      return errors.New("Hello error")
+    }
+
+    // multiple return params
+    func multipleErrorFunc(arg1 string) (string, error) {
+      fmt.Println(arg1)
+      if 1 == 2 {
+        return arg1, nil
+      }
+      return "", errors.New("Hello error")
+    }
+  ```
+
+### Methods 
+  - Methods are special type of functions which allows to add Object oriented behaviour in golang
+  - Every method is tied to some or other object through which it can be called
+```go 
+    // method is tied to the controller
+    func (uc userController) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+      w.Write([]byte("Hello Rakshit"))
+    }
+
+    // method call 
+    uc.ServeHTTP(w,r)
+```
 
 

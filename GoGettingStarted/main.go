@@ -1,16 +1,13 @@
 package main
 
 import (
-	"fmt"
+	"net/http"
 
-	"github.com/ChampionTej05/GoLearnings/GoGettingStarted/models"
+	"github.com/ChampionTej05/GoLearnings/GoGettingStarted/controllers"
 )
 
 func main() {
-	user := models.User{
-		ID:        1,
-		FirstName: "Rakshit",
-		LastName:  "Kathawate",
-	}
-	fmt.Println(user)
+	controllers.RegisterController()
+	http.ListenAndServe(":3000", nil)
+
 }

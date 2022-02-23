@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func sample() {
 	fmt.Println("This is testing the code")
@@ -128,3 +130,27 @@ func sample() {
 	// fmt.Println(u1) // {FirstName 1 lastName}
 
 }
+
+// // func with params of different data types
+// func sampleFunc(arg1 string, arg2 int) {
+// 	fmt.Println(arg1, arg2)
+// }
+
+// // func with params of same data type
+// func sampleSameData(arg1, arg2 string) {
+// 	fmt.Println(arg1, arg2)
+// }
+
+// func errorFunc(arg1 string) error {
+// 	fmt.Println(arg1)
+// 	return errors.New("Hello error")
+// }
+
+// // multiple return params
+// func multipleErrorFunc(arg1 string) (string, error) {
+// 	fmt.Println(arg1)
+// 	if 1 == 2 {
+// 		return arg1, nil
+// 	}
+// 	return "", errors.New("Hello error")
+// }
