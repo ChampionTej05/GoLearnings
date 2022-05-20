@@ -271,3 +271,106 @@ Different ways of declaring vars in golang
 ```
 
 
+### Loops
+  - All loops in go are of the for type only 
+  ```go
+
+    // loop with condition
+    var i int
+    for i < 5 {
+      println(i)
+      i++
+      if i == 3 {
+        break
+      }
+    }
+
+    // classic syantax
+    for j := 0; j < 5; j++ {
+      println(j)
+    }
+
+    // infinite loop
+    var k int
+    for {
+      println(k)
+    }
+
+
+    //traverse loop
+    slices := []int{1, 2, 3}
+    for j := 0; j < len(slices); j++ {
+      println(slices[j])
+    }
+
+    for i, v := range slices {
+      println(i, v)
+    }
+
+    maps := map[string]int{"1": 1, "2": 2, "3": 3}
+    for i, v := range maps {
+      println(i, v)
+    }
+
+    
+    //just the keys
+    for k := range maps {
+      println(k) // ThreeOneTwo
+    }
+
+    // just values
+    for _, v := range maps {
+      println(v)
+    }
+  ```
+
+### Panic
+  - Panic in golang is way to tell application that it has entered a state from where it can't proceed further
+  - It sends high priority signal to app and adds verbose regarding the same 
+  
+  ```go
+
+    // panic : app can't proceed so we use panic
+    panic("Panic hit")
+    /*
+      panic: Panic hit
+
+      goroutine 1 [running]:
+      main.main()
+        /Users/rakshitkathawate/Desktop/PluralSight/Go-Course/Go_Revision/sample.go:185 +0x95
+      exit status 2
+    */
+  ```
+
+### Branching Construct
+  - Branching construct of golang is same as any other language
+  ```go 
+    id1 := 1
+    id2 := 2
+
+    if id1 == id2 {
+      fmt.Println("IF")
+    } else if id1 == id2+1 {
+      fmt.Println("ELSE IF")
+    } else {
+      fmt.Println("ELSE")
+    }
+  ```
+
+### Switches 
+  - ":" define the case block in switch 
+  ```go 
+
+    r := HTTPRequest{Method: "POST"}
+
+    switch r.Method {
+      case "GET":
+        fmt.Println("Get request")
+      case "POST":
+        fmt.Println("POST request")
+      default:
+        fmt.Println("Get request")
+
+    }
+  ```
+

@@ -129,6 +129,80 @@ func sample() {
 	// }
 	// fmt.Println(u1) // {FirstName 1 lastName}
 
+	// loops
+	// all loops are for loop
+
+	// loop with condition
+	// var i int
+	// for i < 5 {
+	// 	println(i)
+	// 	i++
+	// 	if i == 3 {
+	// 		break
+	// 	}
+	// }
+
+	// // classic syantax
+	// for j := 0; j < 5; j++ {
+	// 	println(j)
+	// }
+
+	// infinite loop
+	// var k int
+	// for {
+	// 	println(k)
+	// }
+
+	//traverse loop
+
+	// slices := []int{1, 2, 3}
+	// for j := 0; j < len(slices); j++ {
+	// 	println(slices[j])
+	// }
+
+	// // slices := []int{1, 2, 3}
+	// for i, v := range slices {
+	// 	println(i, v)
+	// }
+
+	// maps := map[string]int{"1": 1, "2": 2, "3": 3}
+	// for i, v := range maps {
+	// 	println(i, v)
+	// }
+
+	// //just the keys
+
+	// for k := range maps {
+	// 	println(k) // ThreeOneTwo
+	// }
+
+	// // just values
+	// for _, v := range maps {
+	// 	println(v)
+	// }
+
+	// // panic : app can't proceed so we use panic
+	// panic("Panic hit")
+	// /*
+	// 	panic: Panic hit
+
+	// 	goroutine 1 [running]:
+	// 	main.main()
+	// 		/Users/rakshitkathawate/Desktop/PluralSight/Go-Course/Go_Revision/sample.go:185 +0x95
+	// 	exit status 2
+	// */
+
+	// id1 := 1
+	// id2 := 2
+
+	// if id1 == id2 {
+	// 	fmt.Println("IF")
+	// } else if id1 == id2+1 {
+	// 	fmt.Println("ELSE IF")
+	// } else {
+	// 	fmt.Println("ELSE")
+	// }
+
 }
 
 // // func with params of different data types
