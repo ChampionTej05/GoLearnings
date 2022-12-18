@@ -31,6 +31,10 @@ This initializes the go.mod file with the import and version
 ### Primitive datatypes
 Different ways of declaring vars in golang 
 ```go
+
+  var username string = "this is string"
+  fmt.Printf("Type of Username %T", username)
+
   var i int
   i = 42
   fmt.Println(" i number :", i)
@@ -40,9 +44,12 @@ Different ways of declaring vars in golang
 
   firstName := "Rakshit"
   fmt.Println(" first name :", firstName)
+  // implicit type declaration is only allowed inside method. we can't have global vars declared as implicit
 
   isTrue := true //
   fmt.Println(" is true :", isTrue)
+
+  var isFalse bool = false
 
   c := complex(3, 4) // complex numbers
   fmt.Println(" c number :", c)
@@ -52,6 +59,31 @@ Different ways of declaring vars in golang
   fmt.Println(" imgN : ", imgN)
   ```
 
+### Taking Inputs from the user 
+We can search for any package in the go-lang on https://pkg.go.dev/.
+We will be using *bufio* for taking user-input here 
+```go
+  import (
+	"bufio"
+	"fmt"
+	"os"
+  )
+
+  func main() {
+
+    var welcomeMessage string = "Welcome User"
+    fmt.Println(welcomeMessage)
+
+    // initialize the reader to read strings
+    var reader = bufio.NewReader(os.Stdin)
+    fmt.Printf("Enter Username: ")
+
+    // read from stdin till "new line(/n)"
+    input, err := reader.ReadString('\n')
+    fmt.Println("Error if any", err)
+    fmt.Printf("Welcome user : %v", input)
+  }
+```
 ### Pointers 
 
  - (*) - Dereference opertor in golang (Assign/get value)
