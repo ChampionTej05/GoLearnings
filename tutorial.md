@@ -84,6 +84,41 @@ We will be using *bufio* for taking user-input here
     fmt.Printf("Welcome user : %v", input)
   }
 ```
+
+
+### Conversion of strings to numbers 
+
+```go
+  import (
+	"bufio"
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+  )
+
+  func main() {
+
+    fmt.Println("Please rate the Pizza Rating")
+
+    reader := bufio.NewReader(os.Stdin)
+
+    input, _ := reader.ReadString('\n')
+    fmt.Printf("Input given by User %v", input)
+    fmt.Printf("Type of the input : %T", input)
+
+    // convert strings
+
+    numRating, err := strconv.ParseFloat(strings.TrimSpace(input), 64)
+    if err != nil {
+      fmt.Println("err ", err)
+    } else {
+      fmt.Println("New Rating ", numRating+5)
+    }
+
+  }
+```
+
 ### Pointers 
 
  - (*) - Dereference opertor in golang (Assign/get value)
